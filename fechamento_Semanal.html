@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Fechamento Semanal</title>
+</head>
+<body data-page="fechamento-semanal">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Fechamento semanal</h1>
+                <p>Consolidado por entregador</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="cards">
+            <article class="card">
+                <h3>Entregas fechadas</h3>
+                <div class="numero" data-week="delivered">0</div>
+                <div class="descricao">Soma da semana</div>
+            </article>
+            <article class="card">
+                <h3>Retornos</h3>
+                <div class="numero" data-week="returned">0</div>
+                <div class="descricao">Pacotes retornados</div>
+            </article>
+            <article class="card">
+                <h3>Valor total</h3>
+                <div class="numero" data-week="value">R$ 0,00</div>
+                <div class="descricao">Bruto menos descontos</div>
+            </article>
+            <article class="card">
+                <h3>Entregadores</h3>
+                <div class="numero" data-week="drivers">0</div>
+                <div class="descricao">Com movimento</div>
+            </article>
+        </section>
+
+        <section class="tabela-container">
+            <div class="section-title">
+                <h2>Resumo por entregador</h2>
+                <span>Semana atual</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Entregador</th>
+                        <th>Saidas</th>
+                        <th>Entregues</th>
+                        <th>Retornados</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody data-week-table></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

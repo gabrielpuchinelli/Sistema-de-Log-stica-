@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Historico</title>
+</head>
+<body data-page="historico">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Historico</h1>
+                <p>Consulta de todas as saidas registradas</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="filters">
+            <label>Buscar<input data-search-history type="search" placeholder="Entregador, data ou status"></label>
+            <button class="btn btn-secondary" data-export-history type="button">Exportar CSV</button>
+        </section>
+
+        <section class="tabela-container">
+            <div class="section-title">
+                <h2>Movimentacoes</h2>
+                <span data-history-count>0 registros</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Entregador</th>
+                        <th>Saida</th>
+                        <th>Entregues</th>
+                        <th>Retornados</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody data-history-table></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

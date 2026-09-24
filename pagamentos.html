@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Pagamentos</title>
+</head>
+<body data-page="pagamentos">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Pagamentos</h1>
+                <p>Valores pendentes e pagamentos realizados</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="cards cards-compact">
+            <article class="card">
+                <h3>Pendente</h3>
+                <div class="numero" data-payments="pending">R$ 0,00</div>
+                <div class="descricao">Fechamentos ainda nao pagos</div>
+            </article>
+            <article class="card">
+                <h3>Pago</h3>
+                <div class="numero" data-payments="paid">R$ 0,00</div>
+                <div class="descricao">Pagamentos confirmados</div>
+            </article>
+        </section>
+
+        <section class="tabela-container">
+            <div class="section-title">
+                <h2>Fechamentos para pagamento</h2>
+                <span data-payment-count>0 itens</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Entregador</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                        <th>Acoes</th>
+                    </tr>
+                </thead>
+                <tbody data-payments-table></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

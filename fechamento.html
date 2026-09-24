@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Fechamento</title>
+</head>
+<body data-page="fechamento">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Fechamento diario</h1>
+                <p>Baixe entregas e retornos por entregador</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="form-panel">
+            <h2>Fechar saida</h2>
+            <form class="form-grid" data-form="close-route">
+                <label>Saida em aberto<select name="routeId" data-route-select required></select></label>
+                <label>Pacotes entregues<input name="entregues" type="number" min="0" placeholder="0" required></label>
+                <label>Pacotes retornados<input name="retornados" type="number" min="0" placeholder="0" required></label>
+                <label>Desconto<input name="desconto" type="number" min="0" step="0.01" value="0"></label>
+                <button class="btn btn-primary" type="submit">Salvar fechamento</button>
+            </form>
+        </section>
+
+        <section class="tabela-container">
+            <div class="section-title">
+                <h2>Fechamentos recentes</h2>
+                <span data-closed-count>0 fechados</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Entregador</th>
+                        <th>Saida</th>
+                        <th>Entregues</th>
+                        <th>Retornados</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody data-closed-table></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

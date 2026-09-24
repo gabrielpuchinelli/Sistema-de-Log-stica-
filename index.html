@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Login</title>
+</head>
+<body class="login-page" data-page="login">
+    <main class="login-shell">
+        <section class="login-brand">
+            <span class="brand-mark">RMS</span>
+            <h1>RMSLogis</h1>
+            <p>Controle de entregas, fechamento e pagamentos em uma rotina simples.</p>
+        </section>
+
+        <form class="login" id="loginForm">
+            <h2>Entrar no sistema</h2>
+            <label>
+                Usuario
+                <input type="text" name="username" placeholder="Digite seu usuario" autocomplete="username" required>
+            </label>
+            <label>
+                Senha
+                <input type="password" name="password" placeholder="Digite sua senha" autocomplete="current-password" required>
+            </label>
+            <button type="submit">Entrar</button>
+            <p class="form-help">Use qualquer usuario e senha para acessar esta versao local.</p>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

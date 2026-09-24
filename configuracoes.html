@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Configuracoes</title>
+</head>
+<body data-page="configuracoes">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Configuracoes</h1>
+                <p>Preferencias do sistema local</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="form-panel">
+            <h2>Dados padrao</h2>
+            <form class="form-grid" data-form="settings">
+                <label>Nome da empresa<input name="empresa" type="text" required></label>
+                <label>Operador padrao<input name="operador" type="text" required></label>
+                <label>Valor padrao por pacote<input name="valorPacote" type="number" min="0" step="0.01" required></label>
+                <button class="btn btn-primary" type="submit">Salvar configuracoes</button>
+            </form>
+        </section>
+
+        <section class="danger-zone">
+            <div>
+                <h2>Base local</h2>
+                <p>Os dados ficam salvos somente neste navegador.</p>
+            </div>
+            <button class="btn btn-danger" data-reset-system type="button">Limpar dados</button>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Entregadores</title>
+</head>
+<body data-page="entregadores">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Entregadores</h1>
+                <p>Cadastro e controle da equipe</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="form-panel">
+            <h2>Novo entregador</h2>
+            <form class="form-grid" data-form="driver">
+                <label>Nome<input name="nome" type="text" placeholder="Nome completo" required></label>
+                <label>Telefone<input name="telefone" type="tel" placeholder="(00) 00000-0000" required></label>
+                <label>Veiculo<input name="veiculo" type="text" placeholder="Moto, carro ou van" required></label>
+                <label>Status
+                    <select name="status">
+                        <option value="Ativo">Ativo</option>
+                        <option value="Inativo">Inativo</option>
+                    </select>
+                </label>
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+            </form>
+        </section>
+
+        <section class="tabela-container">
+            <div class="section-title">
+                <h2>Lista de entregadores</h2>
+                <span data-driver-count>0 cadastrados</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Telefone</th>
+                        <th>Veiculo</th>
+                        <th>Status</th>
+                        <th>Acoes</th>
+                    </tr>
+                </thead>
+                <tbody data-drivers-table></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

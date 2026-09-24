@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>RMSLogis | Dashboard</title>
+</head>
+<body data-page="dashboard">
+    <aside class="sidebar">
+        <a class="logo" href="dashboard.html">RMSLogis</a>
+        <nav class="menu" aria-label="Menu principal"></nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div>
+                <h1>Dashboard</h1>
+                <p>Resumo operacional do dia</p>
+            </div>
+            <div class="usuario" data-user>Operador</div>
+        </header>
+
+        <section class="cards">
+            <article class="card">
+                <h3>Entregadores ativos</h3>
+                <div class="numero" data-metric="activeDrivers">0</div>
+                <div class="descricao">Cadastrados e disponiveis</div>
+            </article>
+            <article class="card">
+                <h3>Pacotes na saida</h3>
+                <div class="numero" data-metric="packagesOut">0</div>
+                <div class="descricao">Registrados hoje</div>
+            </article>
+            <article class="card">
+                <h3>Pacotes entregues</h3>
+                <div class="numero" data-metric="delivered">0</div>
+                <div class="descricao">Baixados no fechamento</div>
+            </article>
+            <article class="card">
+                <h3>Valor acumulado</h3>
+                <div class="numero" data-metric="totalValue">R$ 0,00</div>
+                <div class="descricao">Valor bruto do dia</div>
+            </article>
+        </section>
+
+        <section class="acoes">
+            <a class="btn btn-primary" href="nova_Saida.html">+ Nova saida</a>
+            <a class="btn btn-secondary" href="fechamento.html">Fechar dia</a>
+        </section>
+
+        <section class="resumo">
+            <h2 data-today-title>Resumo de hoje</h2>
+            <div class="resumo-grid">
+                <div class="resumo-item">
+                    <span>Pacotes na saida</span>
+                    <strong data-metric="packagesOut">0</strong>
+                </div>
+                <div class="resumo-item">
+                    <span>Pacotes entregues</span>
+                    <strong data-metric="delivered">0</strong>
+                </div>
+                <div class="resumo-item">
+                    <span>Pacotes retornados</span>
+                    <strong data-metric="returned">0</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="tabela-container">
+            <div class="section-title">
+                <h2>Entregadores de hoje</h2>
+                <span data-record-count>0 registros</span>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Entregador</th>
+                        <th>Saida</th>
+                        <th>Entregues</th>
+                        <th>Retornados</th>
+                        <th>Valor</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody data-dashboard-table></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
