@@ -25,9 +25,9 @@ const seedData = {
     },
     user: null,
     drivers: [
-        { id: makeId(), nome: "Joao Silva", telefone: "(11) 98888-0101", veiculo: "Moto", status: "Ativo" },
-        { id: makeId(), nome: "Pedro Santos", telefone: "(11) 97777-0202", veiculo: "Moto", status: "Ativo" },
-        { id: makeId(), nome: "Carlos Souza", telefone: "(11) 96666-0303", veiculo: "Carro", status: "Ativo" }
+        { id: makeId(), nome: "Joao Silva", telefone: "(21) 98888-0101", veiculo: "Moto", status: "Ativo" },
+        { id: makeId(), nome: "Pedro Santos", telefone: "(21) 97777-0202", veiculo: "Moto", status: "Ativo" },
+        { id: makeId(), nome: "Carlos Souza", telefone: "(21) 96666-0303", veiculo: "Carro", status: "Ativo" }
     ],
     routes: []
 };
